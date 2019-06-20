@@ -14,12 +14,12 @@ export class LugaresComponent  {
   //nombre:string = '';
   //apellido = '';
   lugares:any = [
-    {plan:'pagado' ,cercania: 1, distancia : 1, active: false,nombre: 'Florería La Gardenia'},
-    {plan: 'gratuito',cercania: 1, distancia : 1.8, active: true,nombre: 'Donas La pasadita'},
-    {plan: 'gratuito',cercania: 2, distancia : 5, active: true,nombre: 'Veterinaria huella feliz'},
-    {plan: 'pagado' ,cercania: 3, distancia : 10, active: true,nombre: 'Printers Palmira'},
-    {plan: 'gratuito',cercania: 3, distancia : 35, active: true,nombre: 'Previser'},
-    {plan: 'pagado',cercania: 3, distancia : 120, active: true,nombre: 'Fomento'},
+    {id: 1,plan:'pagado' ,cercania: 1, distancia : 1, active: false,nombre: 'Florería La Gardenia'},
+    {id: 2,plan: 'gratuito',cercania: 1, distancia : 1.8, active: true,nombre: 'Donas La pasadita'},
+    {id: 3,plan: 'gratuito',cercania: 2, distancia : 5, active: true,nombre: 'Veterinaria huella feliz'},
+    {id: 4,plan: 'pagado' ,cercania: 3, distancia : 10, active: true,nombre: 'Printers Palmira'},
+    {id: 5,plan: 'gratuito',cercania: 3, distancia : 35, active: true,nombre: 'Previser'},
+    {id: 6,plan: 'pagado',cercania: 3, distancia : 120, active: true,nombre: 'Fomento'},
   ];
   lat:number = 3.5260943;
   lng:number = -76.3006953;
