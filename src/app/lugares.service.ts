@@ -9,7 +9,11 @@ export class LugaresService {
 
   public guardarPersona(persona) {
     console.log(persona);
-    this.aFDB.database.ref('personas/1').set(persona)
+    this.aFDB.database.ref('personas/'+persona.id).set(persona)
     
+  }
+
+  public getPersonas() {
+    return this.aFDB.list('personas/').valueChanges();
   }
 }

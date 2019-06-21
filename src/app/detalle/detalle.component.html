@@ -1,32 +1,9 @@
-<div class="container">
-<form>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Nombre</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nombre">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Apellido</label>
-    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Apellido">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlInput1">Correo Electronico</label>
-    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlSelect1">Seleccionar</label>
-    <select class="form-control" id="exampleFormControlSelect1">
-      <option>1</option>
-      <option>2</option>
-      <option>3</option>
-      <option>4</option>
-      <option>5</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="exampleFormControlTextarea1">Comentario</label>
-    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
 
+<div class="container">
+    <div class="well">
+        <a routerLink="/lugares">Lugares</a>/{{lugar.nombre}}
+      </div>
+  <h2>{{lugar.nombre}}</h2>
+  <h3>{{lugar.plan}}</h3>
+  <h3>{{lugar.distancia}}</h3>
 </div>

@@ -12,6 +12,7 @@ export class CrearComponent  {
 
   }
   guardarPersona(){
+    this.persona.id = Date.now()
     this.lugaresService.guardarPersona(this.persona)
   }
 

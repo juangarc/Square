@@ -14,6 +14,7 @@ import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/da
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { CrearComponent } from './crear/crear.component';
 import { LugaresService } from './lugares.service';
+import { PersonaComponent } from './persona/persona.component';
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB1eFeIYeQEQn1c9wHrhZlRR9sl2_5CKkA",
@@ -37,7 +38,8 @@ const appRoutes: Routes =[
     ContarClicksDirective,
     DetalleComponent,
     LugaresComponent,
-    CrearComponent
+    CrearComponent,
+    PersonaComponent
   ],
   imports: [
     BrowserModule,
