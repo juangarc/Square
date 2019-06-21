@@ -1,10 +1,18 @@
 import { Component, OnInit } from '@angular/core';
+import { LugaresService } from '../lugares.service';
 
 @Component({
   selector: 'app-crear',
   templateUrl: './crear.component.html',
-  styleUrls: ['./crear.component.css']
+
 })
 export class CrearComponent  {
+  persona:any = {};
+  constructor(private lugaresService: LugaresService) {
+
+  }
+  guardarPersona(){
+    this.lugaresService.guardarPersona(this.persona)
+  }
 
 }

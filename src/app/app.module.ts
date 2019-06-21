@@ -13,13 +13,15 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { CrearComponent } from './crear/crear.component';
+import { LugaresService } from './lugares.service';
 
 export const firebaseConfig = {
-  apiKey: "AIzaSyDXSWkpLjjPJgKjlhzZxwNGzqa8VsFoyRI",
-  authDomain: "platzisquare-1559944915787.firebaseapp.com",
-  databaseURL: "https://platzisquare-1559944915787.firebaseio.com",
-  storageBucket: "platzisquare-1559944915787.appspot.com",
-  messagingSenderId: "925353524109"
+  apiKey: "AIzaSyB1eFeIYeQEQn1c9wHrhZlRR9sl2_5CKkA",
+  authDomain: "square-1b0d0.firebaseapp.com",
+  databaseURL: "https://square-1b0d0.firebaseio.com",
+  storageBucket: "",
+  messagingSenderId: "594963094336",
+  
 };
 
 const appRoutes: Routes =[
@@ -49,7 +51,7 @@ const appRoutes: Routes =[
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [LugaresService, AngularFireDatabase],
   bootstrap: [AppComponent],
   
 })
