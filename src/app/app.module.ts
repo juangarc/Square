@@ -9,10 +9,24 @@ import { ContarClicksDirective } from './directives/contar/clicks.directive';
 import { Route, Routes, RouterModule } from '@angular/router';
 import { DetalleComponent } from './detalle/detalle.component';
 import { LugaresComponent } from './lugares/lugares.component';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFireDatabaseModule, AngularFireDatabase } from '@angular/fire/database';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { CrearComponent } from './crear/crear.component';
+
+export const firebaseConfig = {
+  apiKey: "AIzaSyDXSWkpLjjPJgKjlhzZxwNGzqa8VsFoyRI",
+  authDomain: "platzisquare-1559944915787.firebaseapp.com",
+  databaseURL: "https://platzisquare-1559944915787.firebaseio.com",
+  storageBucket: "platzisquare-1559944915787.appspot.com",
+  messagingSenderId: "925353524109"
+};
+
 const appRoutes: Routes =[
   {path: '', component: LugaresComponent},
   {path: 'lugares', component: LugaresComponent},
   {path: 'detalle/:id', component: DetalleComponent},
+  {path: 'crear', component: CrearComponent}
 ];
 @NgModule({
   declarations: [
@@ -20,7 +34,8 @@ const appRoutes: Routes =[
     ResaltarDirective,
     ContarClicksDirective,
     DetalleComponent,
-    LugaresComponent
+    LugaresComponent,
+    CrearComponent
   ],
   imports: [
     BrowserModule,
@@ -29,9 +44,13 @@ const appRoutes: Routes =[
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyAWcCRVsUSrRkoQL43sUqdTjf1NVV3RxM4'
     }),
-    RouterModule.forRoot(appRoutes)
+    RouterModule.forRoot(appRoutes),
+    AngularFireModule.initializeApp(firebaseConfig),
+    AngularFireDatabaseModule,
+    AngularFireAuthModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  
 })
 export class AppModule { }
