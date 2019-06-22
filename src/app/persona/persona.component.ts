@@ -12,7 +12,6 @@ export class PersonaComponent  {
   constructor(private lugaresService: LugaresService) {
     lugaresService.getPersonas().subscribe(personas =>{  
       this.personas = personas;
-      debugger;
     });
    }
 }
