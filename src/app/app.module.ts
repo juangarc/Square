@@ -15,6 +15,8 @@ import { AngularFireAuthModule } from '@angular/fire/auth';
 import { CrearComponent } from './crear/crear.component';
 import { LugaresService } from './lugares.service';
 import { PersonaComponent } from './persona/persona.component';
+import {HttpClientModule} from '@angular/common/http';
+
 
 export const firebaseConfig = {
   apiKey: "AIzaSyB1eFeIYeQEQn1c9wHrhZlRR9sl2_5CKkA",
@@ -52,7 +54,8 @@ const appRoutes: Routes =[
     RouterModule.forRoot(appRoutes),
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    HttpClientModule,
   ],
   providers: [LugaresService, AngularFireDatabase],
   bootstrap: [AppComponent],
